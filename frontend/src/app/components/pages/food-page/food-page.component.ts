@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { FoodService } from 'src/app/services/food.service';
+import { Food } from 'src/app/shared/models/food';
 
 @Component({
   selector: 'app-food-page',
@@ -6,10 +10,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./food-page.component.css']
 })
 export class FoodPageComponent implements OnInit {
+  food!:Food;
 
-  constructor(){}
-  ngOnInit(): void {
-    
+  constructor(activatedRouter:ActivatedRoute,foodService:FoodService){
+    activatedRouter.params.subscribe((params)=>{
+      if(params.id)
+      this.food=foodService.getFoodById(params.id);
+    })
   }
+  ngOnInit(): void {}
 
 }

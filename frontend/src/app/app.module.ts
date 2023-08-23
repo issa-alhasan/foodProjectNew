@@ -22,6 +22,7 @@ const routes:Routes =[
     AppComponent,
     HeaderComponent,
     HomeComponent,
+    FoodPageComponent,
     SearchComponent,
     TagsComponent
   ],

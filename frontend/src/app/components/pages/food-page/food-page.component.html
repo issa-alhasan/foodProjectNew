@@ -1,1 +1,21 @@
-<p>food-page works!</p>
+<div class="container">
+    <img [src]="food.imageUrl" [alt]="food.name">
+    <div class="details">
+        <div class="header">
+            <span class="name">{{food.name}}</span>
+            <span class="favorite {{food.favorite? '':'not'}}">❤️ </span>
+        </div>
+        <div class="rating">   ⭐️⭐️⭐️</div>
+        <div class="origins">   <span *ngFor="let origin of food.origins">{{origin}}  </span></div>
+        <div class="tags">
+            <a *ngFor="let tag of food.tags " routerLink="/tag/{{tag}}" >{{tag}}  </a>
+        </div>
+        <div class="cook-time">
+            <span>Time to cook about <strong>{{food.cookTime}}</strong> minutes </span>
+        </div>
+        <div class="price">
+            <span>Price: <strong>{{food.price | currency}}</strong> minutes </span>
+        </div>
+        <button> Add To Cart </button>
+    </div>
+</div>

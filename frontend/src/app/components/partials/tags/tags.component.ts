@@ -1,6 +1,5 @@
 import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { FoodService } from 'src/app/services/food.service';
 import { Tag } from 'src/app/shared/models/Tag';
 
