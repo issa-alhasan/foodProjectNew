@@ -1,3 +1,7 @@
+
+
+
+
 <div class="container">
     <img [src]="food.imageUrl" [alt]="food.name">
     <div class="details">
@@ -11,11 +15,11 @@
             <a *ngFor="let tag of food.tags " routerLink="/tag/{{tag}}" >{{tag}}  </a>
         </div>
         <div class="cook-time">
-            <span>Time to cook about <strong>{{food.cookTime}}</strong> minutes </span>
+            <span>Time to cook about <strong>{{food.cookTime}} </strong> minutes </span>
         </div>
         <div class="price">
             <span>Price: <strong>{{food.price | currency}}</strong> minutes </span>
         </div>
-        <button> Add To Cart </button>
+        <button (click)="addToCart()"> Add To Cart </button>
     </div>
 </div>
