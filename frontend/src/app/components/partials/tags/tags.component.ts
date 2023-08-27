@@ -1,5 +1,6 @@
 import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { FoodService } from 'src/app/services/food.service';
 import { Tag } from 'src/app/shared/models/Tag';
 
@@ -10,12 +11,14 @@ import { Tag } from 'src/app/shared/models/Tag';
 })
 export class TagsComponent  implements OnInit{
   tags?:Tag[];
-  constructor(foodService:FoodService){
+  constructor(foodService:FoodService) {
+    let tagsObservable:Observable<Tag[]>;
+    tagsObservable = foodService.getAllTags();
+    tagsObservable.subscribe(serverTags=>{
+      this.tags=serverTags;});
+   }
 
-   this.tags= foodService.getAllTags();
-  }
   ngOnInit(): void {
-    
   }
 
 }

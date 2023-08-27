@@ -1,0 +1,71 @@
+/* Reset some default browser styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style the login container */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 3rem;
+   
+  
+  }
+  
+  /* Style the login box */
+  .details {
+
+    background-color: #f0f050;
+    width: 28rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  /* Style form elements */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .input-container{
+    margin:  0.5rem;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  input[type="password"] {
+   
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  button {
+    
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    cursor: pointer;
+    background-color: #0056b3;
+  }
+  
